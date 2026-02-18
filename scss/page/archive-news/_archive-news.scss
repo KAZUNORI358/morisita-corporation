@@ -1,0 +1,60 @@
+@use "../../global" as g;
+
+/*!
+page > archive-news > archive-news
+------------------------------
+*/
+
+.archive-news-list-item {
+    border-top: 1rem solid var(--color-sep-lightgrey);
+    transition: 0.5s;
+
+    &:last-child {
+        border-bottom: 1rem solid var(--color-sep-lightgrey);
+    }
+
+    span {
+        display: block;
+    }
+
+    a {
+        display: block;
+        padding: 20rem 16rem;
+    }
+
+    @media (any-hover:hover) {
+        &:hover {
+            color: var(--color-text-primary);
+            cursor: pointer;
+        }
+    }
+
+    @include g.mq() {
+        a {
+            display: flex;
+            align-items: center;
+            gap: 16rem;
+            padding: 31rem 16rem;
+        }
+
+        span {
+            display: inline-block;
+        }
+    }
+}
+
+.archive-news-list-item-date {
+    font-size: 17rem;
+    line-height: 1.18;
+    font-family: var(--font-family-en);
+    width: 120rem;
+}
+
+.archive-news-list-item-title {
+    font-size: 15rem;
+    line-height: 1.9;
+
+    @include g.mq() {
+        font-size: 16rem;
+    }
+}

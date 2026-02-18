@@ -1,0 +1,207 @@
+@use "../../global" as g;
+
+/*!
+page > top > news
+------------------------------
+*/
+
+.top-news {
+    padding: 26rem 0 64rem 22rem;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -26rem;
+        right: -22rem;
+        width: calc(100% + 20rem);
+        height: 40rem;
+        background-color: var(--color-bg-white);
+        z-index: var(--z-index-default);
+        border-radius: 32rem 0 0 0;
+
+        @include g.mq() {
+            right: -80rem;
+            width: calc(100% + 80rem);
+            height: 60rem;
+            border-radius: 500rem 0 0 0;
+        }
+    }
+
+    @include g.mq() {
+        padding: 36rem 0 64rem 80rem;
+        display: flex;
+        gap: 80rem;
+    }
+}
+
+.top-news-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-news-title-en {
+    font-family: var(--font-family-en);
+    font-size: 40rem;
+    text-transform: uppercase;
+    color: var(--color-text-primary);
+
+    @include g.mq() {
+        line-height: 1.15;
+    }
+
+}
+
+.top-news-title-ja {
+    font-size: 15rem;
+    color: var(--color-text-light-base);
+
+    @include g.mq() {
+        margin-top: 8rem;
+    }
+}
+
+.top-news-content-wrapper {
+    margin-top: 38rem;
+
+    @include g.mq() {
+        margin-top: 0;
+        width: 100%;
+    }
+}
+
+.top-news-content-item {
+    display: block;
+    padding: 17rem 0 18rem 16rem;
+    border-top: 1rem solid var(--color-sep-lightgrey);
+
+    &:last-child {
+        border-bottom: 1rem solid var(--color-sep-lightgrey);
+    }
+    @include g.mq() {
+        padding: 32rem 0 32rem 16rem;
+    }
+}
+
+.top-news-content-item-link {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @include g.mq() {
+        flex-direction: row;
+        align-items: center;
+        gap: 47rem;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: var(--color-text-primary);
+            transition: 0.5s;
+        }
+    }
+}
+
+.top-news-content-item-date {
+    font-family: var(--font-family-en);
+    font-size: 17rem;
+}
+
+.top-news-content-item-title {
+    font-size: 15rem;
+    line-height: 1.9;
+    width: 288rem;
+    font-weight: 500;
+
+    @include g.mq() {
+        font-size: 16rem;
+        width: auto;
+    }
+}
+
+
+.top-news-button-pc {
+    display: none;
+
+    @include g.mq() {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 200rem;
+        height: 51rem;
+        border-radius: 100vh;
+        padding: 16rem 24rem;
+        background: var(--color-bg-lightest-blue);
+        margin-top: auto;
+        margin-left: 0;
+        transition: 0.5s;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 12rem;
+            height: 11rem;
+            background-image: url(../img/arrow/arrow-primary.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        @media (any-hover:hover) {
+            &:hover {
+
+                background-color: var(--color-bg-primary);
+                color: var(--color-text-white);
+
+                &::after {
+                    background-image: url(../img/arrow/arrow-white-right.svg);
+                }
+            }
+        }
+    }
+}
+
+.top-news-button-sp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200rem;
+    height: 51rem;
+    border-radius: 100vh;
+    padding: 16rem 24rem 16rem 22rem;
+    background: var(--color-bg-lightest-blue);
+    margin-top: 40rem;
+    margin-left: auto;
+    transition: 0.5s;
+
+    @include g.mq() {
+        display: none;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 12rem;
+        height: 11rem;
+        background-image: url(../img/arrow/arrow-primary.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    @media (any-hover:hover) {
+        &:hover {
+
+            background-color: var(--color-bg-primary);
+            color: var(--color-text-white);
+
+            &::after {
+                background-image: url(../img/arrow/arrow-white-right.svg);
+            }
+        }
+    }
+}
+
+.top-news-button-text {
+    font-family: var(--font-family-en);
+    text-transform: uppercase;
+}

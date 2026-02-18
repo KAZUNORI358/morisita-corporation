@@ -1,0 +1,51 @@
+@use "../global" as g;
+
+/*!
+component > breadcrumbs
+------------------------------
+*/
+
+.c-breadcrumb {
+    margin-top: 16rem;
+
+    @include g.mq() {
+        margin-top: 28rem;
+    }
+
+    span {
+        color: var(--color-text-base);
+        font-size: 14rem;
+        letter-spacing: 0.05em;
+    }
+
+    .home {
+        padding: 1rem 0;
+        transition: 0.5s;
+
+        @media (any-hover:hover) {
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .current-item {
+        color: var(--color-text-primary);
+    }
+}
+
+.c-breadcrumb-inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.c-breadcrumb-arrow {
+    display: inline-block;
+    width: 9rem;
+    height: 9rem;
+    background-image: url(../img/arrow/arrow-primary.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 2rem 16rem 0 16rem;
+}

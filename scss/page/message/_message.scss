@@ -1,0 +1,100 @@
+@use "../../global" as g;
+
+/*!
+page > message
+------------------------------
+*/
+
+.message-wrapper {
+    @include g.mq() {
+        display: flex;
+        gap: 56rem;
+    }
+}
+
+.message-image {
+    display: block;
+    aspect-ratio: 340/228;
+    width: 340rem;
+    height: 228rem;
+
+    @include g.mq() {
+        aspect-ratio: 400/530;
+        width: 400rem;
+        height: 530rem;
+        border-radius: 0 0 0 32rem;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.message-content {
+    margin-top: 32rem;
+
+    @include g.mq() {
+        margin-top: 0;
+    }
+}
+
+.message-content-title {
+    font-size: 28rem;
+    line-height: 1.46;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+
+    &--primary {
+        color: var(--color-text-primary);
+    }
+
+    @include g.mq() {
+        font-size: 32rem;
+        line-height: 1.43;
+    }
+}
+
+.message-content-text-wrapper {
+    margin-top: 16rem;
+
+    @include g.mq() {
+        margin-top: 24rem;
+    }
+
+    p{
+        font-size: 15rem;
+        line-height: 1.9;
+
+        @include g.mq() {
+            font-size: 16rem;
+        }
+
+        &:nth-child(2) {
+            margin-top: 12rem;
+        }
+    }
+}
+
+
+.message-content-text-position {
+    margin-top: 32rem;
+    font-size: 15rem;
+    line-height: 1.9;
+
+    @include g.mq() {
+        margin-top: 40rem;
+        font-size: 16rem;
+    }
+}
+
+.message-content-text-name {
+    font-size: 28rem;
+    line-height: 1.46;
+    letter-spacing: 0.05em;
+
+    @include g.mq() {
+        font-size: 32rem;
+    }
+}

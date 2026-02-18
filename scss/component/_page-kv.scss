@@ -1,0 +1,156 @@
+@use "../global" as g;
+
+/*!
+component > page-kv
+------------------------------
+*/
+.c-page-kv {
+    background-color: var(--color-bg-lightest-blue);
+    padding: 121rem 0 40rem 0;
+
+    @include g.mq() {
+        padding: 183rem 0 0 0;
+        height: 432rem;
+    }
+
+    &--level-02 {
+        height: 250rem;
+
+        @include g.mq() {
+            height: 408rem;
+        }
+    }
+}
+
+.c-page-kv-wrapper {
+    @include g.mq() {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        gap: 40rem;
+    }
+
+    &--level-02 {
+        display: flex;
+        flex-direction: column;
+        gap: 8rem;
+
+        @include g.mq() {
+            gap: 16rem;
+        }
+    }
+}
+
+.c-page-kv-image {
+    aspect-ratio: 338/169;
+    border-radius: 0 0 0 56rem;
+    width: 338rem;
+    height: 169rem;
+    overflow: hidden;
+    border: 1px solid var(--color-sep-lightgrey);
+    display: inline-block;
+    object-fit: cover;
+
+    @include g.mq() {
+        aspect-ratio: 498/323;
+        width: 484rem;
+        height: 323rem;
+        position: relative;
+        z-index: var(--z-index-image);
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.c-page-kv-content-wrapper {
+    width: 100%;
+
+    @include g.mq() {
+        width: 760rem;
+    }
+}
+
+.c-page-kv-top-wrapper {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include g.mq() {
+        margin-top: 24rem;
+        width: 755rem;
+    }
+}
+
+.c-page-kv-top-wrapper-title {
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+}
+
+.c-page-kv-en {
+    font-family: var(--font-family-en);
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+
+    &--level-01 {
+        font-size: 20rem;
+        line-height: 1.16;
+
+        @include g.mq() {
+            font-size: 24rem;
+        }
+    }
+
+    &--level-02 {
+        font-size: 50rem;
+        line-height: 1.15;
+
+        @include g.mq() {
+            font-size: 72rem;
+        }
+    }
+}
+
+.c-page-kv-ja {
+    letter-spacing: 0.05em;
+    line-height: 1.46;
+    font-size: 15rem;
+    font-weight: 500;
+
+    @include g.mq() {
+        font-size: 18rem;
+    }
+
+    &--level-01 {
+        color: var(--color-text-light-base);
+    }
+
+    &--level-02 {
+        color: var(--color-text-base);
+    }
+}
+
+.c-page-kv-date {
+    font-family: var(--font-family-en);
+    font-size: 17rem;
+    color: var(--color-news-single-kv-date);
+    line-height: 1.17;
+}
+
+.c-page-kv-title {
+    margin-top: 14rem;
+    font-size: 28rem;
+    line-height: 1.46;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+
+    @include g.mq() {
+        margin-top: 16rem;
+        font-size: 44rem;
+        line-height: 1.45;
+    }
+}

@@ -1,0 +1,33 @@
+@use "../../global" as g;
+
+/*!
+page > company > editor-style-company
+------------------------------
+*/
+
+.p-admin-page--30 {
+    p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    tr {
+        border-bottom: 1px solid var(--color-border-base);
+        display: flex;
+        align-items: flex-start;
+
+        &:first-child {
+            border-top: 1px solid var(--color-border-base);
+        }
+    }
+
+    td {
+        &:first-child {
+            font-weight: 700;
+            width: 224px;
+        }
+
+        padding: 25px 0;
+        border: 0 0 1px solid var(--color-border-base) 0 !important;
+    }
+}

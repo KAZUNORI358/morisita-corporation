@@ -1,0 +1,103 @@
+@use "../../global" as g;
+
+/*!
+page > news-single > editor-style-news-single
+------------------------------
+*/
+
+.post-type-post {
+    h2 {
+        font-size: 20px;
+        line-height: 1.5;
+        letter-spacing: 0.05em;
+        font-weight: 500;
+
+        @include g.mq() {
+            font-size: 24px;
+        }
+    }
+
+    h3 {
+        font-size: 18px;
+        line-height: 1.44;
+        letter-spacing: 0.05em;
+        font-weight: 500;
+
+        @include g.mq() {
+            font-size: 20px;
+        }
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 1.9;
+
+        @include g.mq() {
+            font-size: 16px;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+            font-weight: 500;
+
+            &::before {
+                display: inline-block;
+                content: "";
+                width: 8px;
+                height: 8px;
+                border-radius: 100vh;
+                background-color: var(--color-text-primary);
+            }
+
+            @include g.mq() {
+                font-size: 16px;
+            }
+        }
+    }
+
+    ol {
+        padding-left: 0;
+
+        li {
+            counter-increment: list-counter;
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            line-height: 1.9;
+            gap: 8px;
+
+            &::before {
+                content: counter(list-counter, decimal-leading-zero) ".";
+                font-size: 20px;
+                color: var(--color-text-primary);
+                font-family: var(--font-family-en);
+                line-height: 1.15;
+                font-weight: 500;
+            }
+        }
+    }
+
+    a {
+        display: inline-block;
+        font-size: 15px;
+        line-height: 1.9;
+        color: var(--color-text-primary);
+        text-decoration: underline;
+        transition: opacity 0.5s;
+
+        @media (any-hover:hover) {
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}

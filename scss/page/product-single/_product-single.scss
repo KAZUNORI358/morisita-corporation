@@ -1,0 +1,123 @@
+@use "../../global" as g;
+
+/*!
+page > product-single > product-single
+------------------------------
+*/
+
+.product-single {
+    margin-top: 80rem;
+    margin-bottom: 80rem;
+
+    @include g.mq() {
+        margin-top: 140rem;
+        margin-bottom: 120rem;
+    }
+}
+
+.product-single-image {
+    aspect-ratio: 340/227;
+    width: 340rem;
+    height: 227rem;
+    display: block;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 0 0 0 56rem;
+    border: 1px solid var(--color-border-dc);
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    @include g.mq() {
+        aspect-ratio: 2/1;
+        width: 1000rem;
+        height: 500rem;
+    }
+}
+
+.product-single-sub-slider {
+    margin-top: 16rem;
+
+    @include g.mq() {
+        margin-top: 24rem;
+    }
+
+    .splide__slide {
+        opacity: 0.4;
+
+        &.is-active {
+            opacity: 1;
+        }
+    }
+}
+
+.product-single-image-sub-wrapper {
+    display: flex;
+    gap: 8rem;
+    flex-wrap: wrap;
+
+    @include g.mq() {
+        justify-content: flex-end;
+        gap: 16rem;
+    }
+}
+
+.product-single-image-sub {
+    aspect-ratio: 1/1;
+    width: 72rem !important;
+    height: 72rem !important;
+    display: block;
+
+
+    object-fit: cover;
+    border: 1px solid var(--color-border-dc);
+    cursor: pointer;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    @include g.mq() {
+        width: 104rem !important;
+        height: 104rem !important;
+    }
+}
+
+.product-single-content {
+    margin-top: 56rem;
+}
+
+.product-single-content-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-single-content-list-item {
+    padding: 25rem 0;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--color-border-base);
+    line-height: 1.9;
+    font-size: 15rem;
+
+    &:first-child {
+        border-top: 1px solid var(--color-border-base);
+    }
+
+    dt {
+        line-height: 1.46;
+        font-weight: 700;
+        width: 224rem;
+    }
+
+    @include g.mq() {
+        font-size: 16rem;
+        padding: 31rem 0;
+        flex-direction: row;
+        align-items: center;
+    }
+}

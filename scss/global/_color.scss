@@ -1,0 +1,28 @@
+:root {
+    --color-bg-primary: #1E4AA4;
+    --color-bg-light-grey: #EAECEF;
+    --color-bg-lightest-blue: #F5F8FB;
+    --color-bg-darkblue: #222A38;
+    --color-bg-white: #FFFFFF;
+    --color-bg-white-transparent: rgba(255, 255, 255, 0.2);
+    --color-border-base: rgba(51, 51, 51, 0.1);
+    --color-border-dc: #dcdcdc;
+    --color-border-white-transparent: rgba(255, 255, 255, 0.2);
+    --color-progress-bar-background: rgba(255, 255, 255, 0.25);
+    --color-text-base: #49515F;
+    --color-text-base-transparent: rgba(73, 81, 95, 0.5);
+    --color-text-placeholder: rgba(73, 81, 95, 0.6);
+    --color-text-primary: #1E4AA4;
+    --color-text-white: #FFFFFF;
+    --color-text-light-base: #9A9EAC;
+    --color-other-logo-primary: #06235E;
+    --color-other-logo-grey: #E5EBF0;
+    --color-other-link: #497FDF;
+    --color-sep-lightgrey: #EEEEEE;
+    --color-news-single-kv-date: #333;
+    --color-form-required: #C82828;
+    --color-bg-cta: linear-gradient(180deg, #254DA0 126.2%, #0772D1 -20.47%);
+    --color-bg-kv: linear-gradient(180deg,
+            color-mix(in srgb, #00143d, transparent 100%) 32.13%,
+            color-mix(in srgb, #00143d, transparent 30%) 100%);
+}

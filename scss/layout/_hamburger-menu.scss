@@ -1,0 +1,220 @@
+@use "../global" as g;
+
+/*!
+component > hamburger-menu
+------------------------------
+*/
+
+.l-hamburger-menu-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--color-text-white);
+    background-color: var(--color-bg-primary);
+    z-index: var(--z-index-modal);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @include g.mq(md) {
+        display: none;
+    }
+
+    /* スクロールしたときのスタイル */
+    &.is-active {
+        .l-hamburger-menu-dialog-header {
+            padding: 10rem 17rem 15rem 20rem;
+        }
+    }
+}
+
+.l-hamburger-menu-dialog-header {
+    padding: 32rem 20rem 0 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+}
+
+.l-hamburger-menu-button {
+    width: 56rem;
+    height: 56rem;
+    border-radius: 100vh;
+    border: 1rem solid var(--color-text-white);
+    position: relative;
+    margin-left: auto;
+
+    @include g.mq(md) {
+        display: none;
+    }
+
+    span {
+        position: absolute;
+        display: inline-block;
+        left: 17%;
+        width: 35.78rem;
+        height: 1rem;
+        background-color: var(--color-text-white);
+    }
+
+    span:nth-child(1) {
+        rotate: 26.57deg;
+    }
+
+    span:nth-child(2) {
+        rotate: -26.57deg;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: var(--color-font-base);
+        font-family: var(--font-family-en);
+        font-size: 12rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+}
+
+.l-hamburger-menu-content {
+    padding: 0 69rem 0 20rem;
+    margin-top: 30rem;
+    width: 100vw;
+}
+
+.l-hamburger-menu-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.l-hamburger-menu-item {
+    border-top: 1rem solid rgba(255, 255, 255, 0.2);
+    position: relative;
+
+    &:last-child {
+        border-bottom: 1rem solid rgba(255, 255, 255, 0.2);
+    }
+
+    a {
+        padding: 20rem 0;
+        display: inline-flex;
+        width: 296rem;
+        height: 100%;
+        position: relative;
+        transition: 0.5s;
+
+        @media (any-hover:hover) {
+            &:hover {
+                .l-hamburger-menu-item-text::before {
+                    transform: scale(1, 1);
+                }
+            }
+        }
+    }
+}
+
+.l-hamburger-menu-item-business {
+    padding: 20rem 0;
+    margin-left: 16rem;
+}
+
+.l-hamburger-menu-item-business-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1rem solid rgba(255, 255, 255, 0.2);
+
+    a {
+        padding: 16rem 0;
+        display: inline-flex;
+        width: 296rem;
+        height: 100%;
+        transition: 0.5s;
+
+        @media (any-hover:hover) {
+            &:hover {
+                .l-hamburger-menu-item-text-business::before {
+                    transform: scale(1, 1);
+                }
+            }
+        }
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 9rem;
+        height: 9rem;
+        margin-right: 16rem;
+        background-image: url(../img/arrow/arrow-white-top.svg);
+        rotate: 90deg;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+.l-hamburger-menu-item-text {
+    margin-left: 16rem;
+    position: relative;
+    width: fit-content;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1rem;
+        background-color: var(--color-text-white);
+        bottom: 0;
+        left: 0;
+        transform: scale(0, 1);
+        transform-origin: left;
+        transition: transform 0.5s;
+    }
+}
+
+.l-hamburger-menu-item-text-en {
+    font-family: var(--font-family-en);
+    font-size: 24rem;
+    line-height: 1.16;
+    text-transform: uppercase;
+}
+
+.l-hamburger-menu-item-text-ja {
+    margin-top: 5rem;
+    font-size: 15rem;
+    line-height: 1.46;
+    margin-left: 8rem;
+}
+
+.l-hamburger-menu-item-text-business {
+    margin-left: 16rem;
+    font-size: 14rem;
+    line-height: 1.16;
+    letter-spacing: 0.05em;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1rem;
+        background-color: var(--color-text-white);
+        bottom: 0;
+        left: 0;
+        transform: scale(0, 1);
+        transform-origin: left;
+        transition: transform 0.5s;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            &::before {
+                transform: scale(1, 1);
+            }
+        }
+    }
+}

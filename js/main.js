@@ -1,0 +1,23 @@
+import { initializeHamburgerMenu } from "./component/hamburger-menu.js";
+import { initializedDropdownMenu } from "./component/dropdownmenu.js";
+import { initializeFooterSmoothScroll } from "./smooth-scroll/footer-smooth-scroll.js";
+import { initializeSidebarSmoothScroll } from "./smooth-scroll/sidebar-smooth-scroll.js";
+import { initializeHeaderScroll } from "./component/header-scroll.js";
+import { initializeCtaBackgroundSlider } from "./slider/cta-background-slider.js";
+import { initializeProductSlider } from "./slider/product-slider.js";
+import { initializeKvSlider } from "./slider/kv-slider.js";
+import { initializeSidebar } from "./component/sidebar.js";
+import { initializeProductSingleKvSlider } from "./slider/product-single-kv-slider.js";
+import { setUtmSourceToHiddenField } from "./component/utm-source.js";
+
+initializeHamburgerMenu();
+initializedDropdownMenu();
+initializeFooterSmoothScroll();
+initializeSidebarSmoothScroll();
+initializeHeaderScroll();
+initializeCtaBackgroundSlider();
+initializeProductSlider();
+initializeKvSlider();
+initializeSidebar();
+initializeProductSingleKvSlider();
+setUtmSourceToHiddenField();

@@ -1,0 +1,228 @@
+@use "../../global" as g;
+
+/*!
+page > top > business
+------------------------------
+*/
+
+.top-business {
+    padding-bottom: 80rem;
+    position: relative;
+    overflow: hidden;
+    z-index: var(--z-index-default);
+
+    &::after {
+        position: absolute;
+        content: "Business";
+        font-family: var(--font-family-en);
+        font-size: 120rem;
+        line-height: 1.6;
+        text-transform: uppercase;
+        color: var(--color-text-base);
+        white-space: nowrap;
+        opacity: 0.028;
+        display: block;
+        bottom: -70rem;
+        left: 80rem;
+    }
+
+    @include g.mq() {
+        padding-top: 120rem;
+        padding-bottom: 144rem;
+
+        &::after {
+            font-size: 240rem;
+            bottom: -140rem;
+            left: 625rem;
+            z-index: var(--z-index-background);
+        }
+    }
+}
+
+.top-business-container {
+    @include g.mq() {
+        display: flex;
+        gap: 56rem;
+    }
+}
+
+.top-business-image {
+    aspect-ratio: 340/227;
+    width: 340rem;
+    height: 227rem;
+    display: block;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @include g.mq() {
+        aspect-ratio: 580/600;
+        width: 580rem;
+        height: 600rem;
+    }
+}
+
+.top-business-wrapper {
+    @include g.mq() {
+        width: 664rem;
+    }
+}
+
+.top-business-header {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    margin-top: 56rem;
+
+    @include g.mq() {
+
+        margin-top: 0;
+    }
+}
+
+.top-business-title-en {
+    font-size: 20rem;
+    text-transform: uppercase;
+    color: var(--color-text-primary);
+    line-height: 1.15;
+}
+
+.top-business-title-ja {
+    font-size: 15rem;
+    color: var(--color-text-light-base);
+    font-weight: 500;
+    line-height: 1.46;
+}
+
+.top-business-content-title {
+    margin-top: 8rem;
+    font-size: 28rem;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+
+    span {
+        display: block;
+
+        @include g.mq() {
+            &.is-no-break-pc {
+                display: inline;
+            }
+        }
+    }
+
+    @include g.mq() {
+        margin-top: 13rem;
+        font-size: 32rem;
+    }
+}
+
+.top-business-content-text {
+    margin-top: 21rem;
+    line-height: 1.9;
+    font-size: 15rem;
+
+    @include g.mq() {
+        margin-top: 38rem;
+        font-size: 16rem;
+    }
+
+    span {
+        display: block;
+
+        @include g.mq() {
+            &.is-no-break-pc {
+                display: inline;
+            }
+        }
+    }
+}
+
+.top-business-link-wrapper {
+    margin-top: 45rem;
+
+    @include g.mq() {
+        margin-top: 56rem;
+    }
+}
+
+.top-business-link {
+    display: flex;
+    justify-content: space-between;
+    gap: 18rem;
+    padding: 20rem 20rem 10rem 17rem;
+    border-top: 1rem solid var(--color-sep-lightgrey);
+    position: relative;
+    z-index: var(--z-index-default);
+    transition: 0.5s;
+
+    @include g.mq() {
+        padding: 29rem 15rem 18rem 16rem;
+        gap: 0;
+    }
+
+    &:last-child {
+        border-bottom: 1rem solid var(--color-sep-lightgrey);
+    }
+
+    @media (any-hover:hover) {
+        &:hover {
+            .top-business-link-text {
+                color: var(--color-text-primary);
+            }
+
+            .top-business-link-icon {
+                background-color: var(--color-bg-primary);
+
+                &::after {
+                    background-image: url(../img/arrow/arrow-white-right.svg);
+                }
+            }
+        }
+    }
+}
+
+.top-business-link-text {
+    font-size: 18rem;
+    letter-spacing: 0.05em;
+    width: 252rem;
+    transition: 0.5s;
+
+    @include g.mq() {
+        font-size: 20rem;
+        width: auto;
+    }
+}
+
+.top-business-link-icon {
+    margin-top: 5rem;
+    position: relative;
+    width: 40rem;
+    height: 40rem;
+    border-radius: 100vh;
+    background: var(--color-bg-lightest-blue);
+    transition: 0.5s;
+
+    @include g.mq() {
+        margin-top: -1rem;
+        width: 44rem;
+        height: 44rem;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 50%;
+        left: 56%;
+        transform: translate(-50%, -50%);
+        background-image: url(../img/arrow/arrow-primary.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 12rem;
+        height: 11rem;
+    }
+}

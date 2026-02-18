@@ -1,0 +1,162 @@
+@use "../../global" as g;
+
+/*!
+page > top > kv
+------------------------------
+*/
+
+.top-kv {
+    position: relative;
+    width: 100%;
+    height: 675rem;
+
+    @include g.mq() {
+        height: 795rem;
+    }
+}
+
+.top-kv-image {
+    display: inline-block;
+    width: 100%;
+    height: 675rem;
+    aspect-ratio: 360/680;
+    object-fit: contain;
+    z-index: 1;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: var(--color-bg-kv);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+
+    @include g.mq() {
+        width: 100%;
+        height: 795rem;
+    }
+}
+
+.top-kv-wrapper {
+    position: absolute;
+    bottom: 102rem;
+    left: 0;
+    padding: 0 20rem;
+    z-index: var(--z-index-default);
+
+    @include g.mq() {
+        padding: 0 68rem 0 72rem;
+        bottom: 101rem;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+        align-items: flex-end;
+    }
+}
+
+.top-kv-circle {
+    position: relative;
+    width: 104rem;
+    height: 104rem;
+
+    @include g.mq() {
+        width: 146rem;
+        height: 146rem;
+    }
+}
+
+.top-kv-circle-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform: rotate(-90deg);
+}
+
+.top-kv-circle-svg-circle {
+    stroke: var(--color-progress-bar-background);
+    fill: transparent;
+    stroke-width: 1.42;
+
+    @include g.mq() {
+        stroke-width: 2;
+    }
+}
+
+.top-kv-circle-svg-circle-moving {
+    stroke: var(--color-text-white);
+    fill: transparent;
+    stroke-width: 1.42;
+
+    @include g.mq() {
+        stroke-width: 2;
+    }
+}
+
+.top-kv-circle-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-family-en);
+    font-size: 25.64rem;
+    color: var(--color-text-white);
+    letter-spacing: 0.05em;
+
+    @include g.mq() {
+        font-size: 36rem;
+    }
+}
+
+.top-kv-content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-kv-content-ja {
+    margin-top: 30rem;
+    font-size: 30rem;
+    color: var(--color-text-white);
+    line-height: 1.43;
+
+    @include g.mq() {
+        font-size: 55rem;
+        margin-top: 0;
+    }
+
+    span {
+        display: block;
+    }
+}
+
+.top-kv-content-en {
+    margin-top: 7rem;
+    font-family: var(--font-family-en);
+    font-size: 18rem;
+    color: var(--color-text-white);
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+
+    span {
+        display: block;
+    }
+
+    @include g.mq() {
+        font-size: 20rem;
+        margin-top: 24rem;
+
+        span {
+            display: inline;
+        }
+    }
+}

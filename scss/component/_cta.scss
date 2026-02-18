@@ -1,0 +1,116 @@
+@use "../global" as g;
+
+/*!
+component > cta
+------------------------------
+*/
+
+.c-cta {
+    background-color: var(--color-bg-lightest-blue);
+    padding: 98.91rem 0 70rem 0;
+    position: relative;
+    border-radius: 32rem 32rem 0 0;
+    z-index: var(--z-index-default);
+
+    @include g.mq() {
+        padding: 147.67rem 0 100.7rem 0;
+        border-radius: 56rem 56rem 0 0;
+    }
+}
+
+.c-cta-background {
+    position: absolute;
+    top: 51%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: var(--z-index-background);
+
+    @include g.mq() {
+        top: 54%;
+    }
+}
+
+.c-cta-background-image {
+    width: auto;
+    height: 80rem;
+    object-fit: cover;
+    display: block;
+
+    img {
+        width: auto;
+        height: 100%;
+    }
+
+    @include g.mq() {
+        height: 125rem;
+    }
+}
+
+.c-cta-button {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 100vh;
+    color: var(--color-text-white);
+    background-image: var(--color-bg-cta);
+    width: 218.18rem;
+    height: 218.18rem;
+    text-align: center;
+    justify-content: center;
+    gap: 8rem;
+    z-index: var(--z-index-default);
+    transition: 0.5s;
+
+    @media (any-hover:hover) {
+        &:hover {
+            scale: 1.05;
+        }
+    }
+
+    @include g.mq() {
+        width: 280rem;
+        height: 280rem;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 240rem;
+        height: 240rem;
+        border-radius: 100vh;
+        border: 1rem solid var(--color-text-primary);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include g.mq() {
+            width: 308rem;
+            height: 308rem;
+        }
+    }
+}
+
+.c-cta-button-en {
+    font-family: var(--font-family-en);
+    font-size: 32rem;
+    line-height: 1.6;
+    margin-top: 11rem;
+
+    @include g.mq() {
+        font-size: 40rem;
+        margin-top: -1rem;
+    }
+}
+
+.c-cta-button-ja {
+    font-size: 13rem;
+    line-height: 1.6;
+    margin-bottom: 8rem;
+
+    @include g.mq() {
+        font-size: 16rem;
+        margin-bottom: 17rem;
+    }
+}

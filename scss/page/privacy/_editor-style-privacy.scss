@@ -1,0 +1,33 @@
+@use "../../global" as g;
+
+/*!
+page > privacy > editor-style-privacy
+------------------------------
+*/
+
+.p-admin-page--8 {
+    p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    ul{
+        padding-left: 20px;
+    }
+
+    li{
+        margin-top: 4px;
+        list-style: none;
+        counter-increment: list;
+        display: flex;
+        align-items: flex-start;
+        gap: 4px;
+
+        &::before {
+            content: counter(list) ". ";
+            display: inline-block;
+            font-size: 15px;
+        }
+    }
+
+}
