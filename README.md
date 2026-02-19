@@ -1,13 +1,13 @@
-# 株式会社森下(架空サイト)
+# 株式会社森下 (架空サイト)
 
 ## 概要
 Hello Mentor の課題でFigmaのデザインカンプをもとに、コーディングしました。
 
 ## 制作期間
-
+2026年1月~2月(約1ヶ月)
 
 ## 公開URL
-
+URLが入ります
 
 ## 開発環境のセットアップ
 
@@ -22,12 +22,12 @@ Hello Mentor の課題でFigmaのデザインカンプをもとに、コーデ�
 
 ### SCSS 開発
 
--   **Live Sass Compiler**: SCSS ファイルのリアルタイムコンパイル
+-   **Live Sass Compiler**： SCSS ファイルのリアルタイムコンパイル
 
 ### コードフォーマット
 
--   **Format HTML in PHP**: PHP ファイル内の HTML と PHP コードの自動フォーマット
--   **Prettier**: SCSS、JavaScript、JSON 等のコードフォーマット
+-   **Format HTML in PHP**： PHP ファイル内の HTML と PHP コードの自動フォーマット
+-   **Prettier**： SCSS、JavaScript、JSON 等のコードフォーマット
 
 ## ファイル構成
 
