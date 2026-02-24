@@ -273,8 +273,7 @@ utility > utility
   border: 0 !important;
   padding: 0 !important;
   clip: rect(0 0 0 0) !important;
-  -webkit-clip-path: inset(50%) !important;
-          clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
   margin: -1px !important;
 }
 
@@ -496,6 +495,7 @@ component > cta
   position: relative;
   border-radius: 32rem 32rem 0 0;
   z-index: var(--z-index-default);
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .c-cta {
@@ -791,12 +791,14 @@ layout > header
   width: 100%;
   z-index: var(--z-index-header);
   padding: 32rem 20rem 32rem 20rem;
-  /* スクロールしたときのスタイル */
 }
 @media screen and (min-width: 768px) {
   .l-header {
     padding: 47rem 69rem 25rem 70rem;
   }
+}
+.l-header {
+  /* スクロールしたときのスタイル */
 }
 .l-header.is-active {
   position: fixed;
@@ -1053,6 +1055,7 @@ layout > header
 
 .l-header-dropdown-menu {
   visibility: hidden;
+  opacity: 0;
   position: absolute;
   top: 65rem;
   left: 690rem;
@@ -1287,14 +1290,19 @@ layout > footer
 
 .l-footer-copyright {
   margin-top: 50rem;
-  font-family: var(--font-family-en);
-  font-size: 13rem;
-  line-height: 1.6;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .l-footer-copyright {
     margin-top: 113rem;
+    text-align: left;
   }
+}
+
+.l-footer-copyright-text {
+  font-family: var(--font-family-en);
+  font-size: 13rem;
+  line-height: 1.6;
 }
 
 .l-footer-nav {
@@ -1523,12 +1531,14 @@ component > hamburger-menu
   z-index: var(--z-index-modal);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  /* スクロールしたときのスタイル */
 }
 @media screen and (min-width: 768px) {
   .l-hamburger-menu-dialog {
     display: none;
   }
+}
+.l-hamburger-menu-dialog {
+  /* スクロールしたときのスタイル */
 }
 .l-hamburger-menu-dialog.is-active .l-hamburger-menu-dialog-header {
   padding: 10rem 17rem 15rem 20rem;

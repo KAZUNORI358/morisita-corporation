@@ -107,13 +107,13 @@ page > company > editor-style-company
 .p-admin-page--30 tr:first-child {
   border-top: 1px solid var(--color-border-base);
 }
-.p-admin-page--30 td {
-  padding: 25px 0;
-  border: 0 0 1px solid var(--color-border-base) 0 !important;
-}
 .p-admin-page--30 td:first-child {
   font-weight: 700;
   width: 224px;
+}
+.p-admin-page--30 td {
+  padding: 25px 0;
+  border: 0 0 1px solid var(--color-border-base) 0 !important;
 }
 
 /*!

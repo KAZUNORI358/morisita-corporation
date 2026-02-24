@@ -112,13 +112,18 @@ layout > footer
 
 .l-footer-copyright {
     margin-top: 50rem;
-    font-family: var(--font-family-en);
-    font-size: 13rem;
-    line-height: 1.6;
+    text-align: center;
 
     @include g.mq() {
         margin-top: 113rem;
+        text-align: left;
     }
+}
+
+.l-footer-copyright-text {
+    font-family: var(--font-family-en);
+    font-size: 13rem;
+    line-height: 1.6;
 }
 
 .l-footer-nav {

@@ -73,9 +73,11 @@
                     </ul>
                 </div>
             </nav>
-            <small class="l-footer-copyright">
-                © 2024 MORISITA inc.
-            </small>
+            <div class="l-footer-copyright">
+                <small class="l-footer-copyright-text">
+                    © 2024 MORISITA inc.
+                </small>
+            </div>
         </div>
     </div>
 </footer>
