@@ -40,7 +40,7 @@ add_filter('post_link', function ($permalink, $post) {
 add_action('init', function () {
     add_rewrite_rule(
         'news/([^/]+)/?$',
-        'index.php?name=$matches[1]',
+        'index.php?post_type=post&name=$matches[1]', // post_typeを指定して限定する
         'top'
     );
 });

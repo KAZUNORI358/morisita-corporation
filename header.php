@@ -58,10 +58,10 @@
                                 <button class="js-dropdown-open-button" aria-label="事業紹介のドロップダウンを開く">事業紹介</button>
                             </li>
                             <li class="l-header-item">
-                                <a href="<?php echo esc_url(home_url('product')); ?>">製品紹介</a>
+                                <a href="<?php echo esc_url(home_url('/product')); ?>">製品紹介</a>
                             </li>
                             <li class="l-header-item">
-                                <a href="<?php echo esc_url(home_url('access')); ?>">アクセス</a>
+                                <a href="<?php echo esc_url(home_url('/access')); ?>">アクセス</a>
                             </li>
                         </ul>
                     </nav>

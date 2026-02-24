@@ -4,11 +4,12 @@ export const initializedDropdownMenu = () => {
 
     if (!menu || !button) return;
 
-    // menuのopen状態
-    let isOpen = false;
+    const openClass = "is-active";
+    gsap.set(menu, { autoAlpha: 0, scale: 0.95 });
 
     // menuをopenする関数
     const openMenu = () => {
+        menu.classList.add(openClass);
         gsap.to(menu, {
             autoAlpha: 1,
             scale: 1,
@@ -19,6 +20,7 @@ export const initializedDropdownMenu = () => {
 
     // menuをcloseする関数
     const closeMenu = () => {
+        menu.classList.remove(openClass);
         gsap.to(menu, {
             autoAlpha: 0,
             scale: 0.95,
@@ -31,13 +33,12 @@ export const initializedDropdownMenu = () => {
     button.addEventListener("click", (event) => {
         event.stopPropagation();
 
+        const isOpen = menu.classList.contains(openClass);
         if (isOpen) {
             closeMenu();
         } else {
             openMenu();
         }
-
-        isOpen = !isOpen;
     });
 
     // button外の領域をクリックした場合、menuを閉じる
