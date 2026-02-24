@@ -12,7 +12,7 @@ Hello Mentor の課題でFigmaのデザインカンプをもとに、コーデ�
 
 ## 公開URL
 
-[morisita-corporation.kazunori-folio.com]:morisita-corporation.kazunori-folio.com/ "森下リンク"
+[morisita-corporation.kazunori-folio.com](morisita-corporation.kazunori-folio.com)
 
 ## 概要
 
