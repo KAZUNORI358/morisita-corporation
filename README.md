@@ -12,7 +12,7 @@ Hello Mentor の課題でFigmaのデザインカンプをもとに、コーデ�
 
 ## 公開URL
 
-URLが入ります
+morisita-corporation.kazunori-folio.com
 
 ## 概要
 
