@@ -116,7 +116,6 @@ page > top > top-product
                 background-color: var(--color-bg-white);
                 color: var(--color-text-primary);
                 border-color: var(--color-text-primary);
-                transition: 0.5s;
             }
 
             .top-product-item-title {
@@ -165,6 +164,7 @@ page > top > top-product
     border-radius: 16rem;
     padding: 1rem 7rem;
     width: fit-content;
+    transition: 0.5s;
 
     @include g.mq() {
         font-size: 16rem;
