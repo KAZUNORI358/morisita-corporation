@@ -72,14 +72,20 @@ page > top > news
 
 .top-news-content-item {
     display: block;
-    padding: 17rem 0 18rem 16rem;
     border-top: 1rem solid var(--color-sep-lightgrey);
+
+    a {
+        padding: 17rem 0 18rem 16rem;
+    }
 
     &:last-child {
         border-bottom: 1rem solid var(--color-sep-lightgrey);
     }
+
     @include g.mq() {
-        padding: 32rem 0 32rem 16rem;
+        a {
+            padding: 32rem 0 32rem 16rem;
+        }
     }
 }
 

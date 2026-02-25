@@ -103,7 +103,8 @@ page > top > top-product
     gap: 16rem;
     overflow: hidden;
     width: 100%;
-    height: 100%;
+    height: contain;
+    padding-bottom: 4rem;
 
     @media (any-hover:hover) {
         &:hover {

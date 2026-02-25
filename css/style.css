@@ -2026,14 +2026,16 @@ page > top > news
 
 .top-news-content-item {
   display: block;
-  padding: 17rem 0 18rem 16rem;
   border-top: 1rem solid var(--color-sep-lightgrey);
+}
+.top-news-content-item a {
+  padding: 17rem 0 18rem 16rem;
 }
 .top-news-content-item:last-child {
   border-bottom: 1rem solid var(--color-sep-lightgrey);
 }
 @media screen and (min-width: 768px) {
-  .top-news-content-item {
+  .top-news-content-item a {
     padding: 32rem 0 32rem 16rem;
   }
 }
@@ -2538,7 +2540,8 @@ page > top > top-product
   gap: 16rem;
   overflow: hidden;
   width: 100%;
-  height: 100%;
+  height: contain;
+  padding-bottom: 4rem;
 }
 @media (any-hover: hover) {
   .top-product-item-link:hover img {
