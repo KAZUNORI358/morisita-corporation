@@ -102,6 +102,8 @@ page > top > top-product
     flex-direction: column;
     gap: 16rem;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
 
     @media (any-hover:hover) {
         &:hover {

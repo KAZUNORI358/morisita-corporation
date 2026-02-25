@@ -35,10 +35,14 @@ layout > header
 
             .l-header-item,
             .l-header-item-business {
-                color: var(--color-text-white);
 
-                &::before {
-                    background-color: var(--color-text-white);
+                a,
+                button {
+                    color: var(--color-text-white);
+
+                    &::before {
+                        background-color: var(--color-text-white);
+                    }
                 }
             }
 
@@ -165,33 +169,36 @@ layout > header
 .l-header-item {
     color: var(--color-text-white);
     display: inline-block;
-    position: relative;
     font-size: 16rem;
     line-height: 1.9;
-    padding: 10rem 0;
 
-    &::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 1rem;
-        background-color: var(--color-text-white);
-        bottom: 8rem;
-        left: 0;
-        transform: scale(0, 1);
-        transform-origin: center;
-        transition: transform 0.3s;
+    a {
+        position: relative;
+        padding: 4rem 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1rem;
+            background-color: var(--color-text-white);
+            bottom: 0;
+            left: 0;
+            transform: scale(0, 1);
+            transform-origin: center;
+            transition: transform 0.3s;
+        }
     }
 
     @media (any-hover: hover) {
         &:hover {
-            &::before {
+            a::before {
                 transform: scale(1, 1);
             }
         }
     }
 
-    &--sub {
+    &--sub a {
         color: var(--color-text-base);
 
         &::before {
@@ -205,26 +212,29 @@ layout > header
     display: flex;
     align-items: center;
     gap: 6rem;
-    position: relative;
-    padding: 10rem 0;
 
-    &::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 1rem;
-        background-color: var(--color-text-white);
-        bottom: 8rem;
-        left: 0;
-        transform: scale(0, 1);
-        transform-origin: center;
-        transition: transform 0.3s;
-    }
+    button {
+        position: relative;
+        padding: 4rem 0;
 
-    @media (any-hover: hover) {
-        &:hover {
-            &::before {
-                transform: scale(1, 1);
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1rem;
+            background-color: var(--color-text-white);
+            bottom: 0;
+            left: 0;
+            transform: scale(0, 1);
+            transform-origin: center;
+            transition: transform 0.3s;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                &::before {
+                    transform: scale(1, 1);
+                }
             }
         }
     }
@@ -243,14 +253,16 @@ layout > header
     }
 
     &--sub {
-        color: var(--color-text-base);
-
         &::after {
             background-image: url(../img/arrow/arrow-primary.svg);
         }
 
-        &::before {
-            background-color: var(--color-text-base);
+        button {
+            color: var(--color-text-base);
+
+            &::before {
+                background-color: var(--color-text-base);
+            }
         }
     }
 }
