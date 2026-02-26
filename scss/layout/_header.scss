@@ -18,6 +18,7 @@ layout > header
 
     &.is-active {
         /* スクロールしたときのスタイル */
+        width: 380rem;
         position: fixed;
         padding: 10rem 20rem 15rem 20rem;
         background-color: var(--color-bg-primary);

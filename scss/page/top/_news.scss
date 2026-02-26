@@ -13,7 +13,7 @@ page > top > news
         content: "";
         position: absolute;
         top: -26rem;
-        left: 0;
+        right: -18rem;
         width: 360rem;
         height: 40rem;
         background-color: var(--color-bg-white);
@@ -21,7 +21,8 @@ page > top > news
         border-radius: 32rem 0 0 0;
 
         @include g.mq() {
-            width: 1370rem;
+            right: -71rem;
+            width: 1355rem;
             height: 60rem;
             border-radius: 500rem 0 0 0;
         }

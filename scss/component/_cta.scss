@@ -11,6 +11,7 @@ component > cta
     position: relative;
     border-radius: 32rem 32rem 0 0;
     z-index: var(--z-index-default);
+    overflow: hidden;
 
     @include g.mq() {
         padding: 147.67rem 0 100.7rem 0;
@@ -48,7 +49,7 @@ component > cta
 }
 
 .c-cta-background-image {
-    // width: auto;
+    width: auto;
     height: 80rem;
     object-fit: cover;
     display: block;
