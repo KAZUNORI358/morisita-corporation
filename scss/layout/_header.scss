@@ -33,6 +33,7 @@ layout > header
         @include g.mq() {
             padding: 8rem 78rem 8rem 70rem;
             width: 1440rem;
+
             .l-header-item,
             .l-header-item-business {
 
@@ -268,17 +269,22 @@ layout > header
 }
 
 .l-header-dropdown-menu {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 65rem;
-    left: 690rem;
-    border-radius: 16rem;
-    background-color: var(--color-bg-primary);
-    width: 312rem;
-    height: 172rem;
-    box-shadow: 0 0 10rem 0 rgba(0, 0, 0, 0.1);
-    color: var(--color-text-white);
+    display: none;
+
+    @include g.mq() {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 65rem;
+        left: 690rem;
+        border-radius: 16rem;
+        background-color: var(--color-bg-primary);
+        width: 312rem;
+        height: 172rem;
+        box-shadow: 0 0 10rem 0 rgba(0, 0, 0, 0.1);
+        color: var(--color-text-white);
+    }
 
     &.is-active {
         top: 65rem;
