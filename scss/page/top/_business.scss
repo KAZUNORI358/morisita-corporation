@@ -152,7 +152,7 @@ page > top > business
 .top-business-link {
     display: flex;
     justify-content: space-between;
-    gap: 18rem;
+    gap: 16rem;
     padding: 20rem 20rem 10rem 17rem;
     border-top: 1rem solid var(--color-sep-lightgrey);
     position: relative;
@@ -188,7 +188,7 @@ page > top > business
 .top-business-link-text {
     font-size: 18rem;
     letter-spacing: 0.05em;
-    width: 252rem;
+    width: 230rem;
     transition: 0.5s;
 
     @include g.mq() {

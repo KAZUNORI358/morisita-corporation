@@ -22,18 +22,33 @@ component > cta
     position: absolute;
     top: 51%;
     left: 50%;
-    width: 100%;
+    width: 380rem;
     transform: translate(-50%, -50%);
     z-index: var(--z-index-background);
     overflow: hidden;
 
     @include g.mq() {
         top: 54%;
+        width: 1440rem;
+    }
+
+    // Splideのデフォルトスタイルをリセット
+    .splide__track {
+        overflow: visible;
+    }
+
+    .splide__list {
+        display: flex;
+        align-items: center;
+    }
+
+    .splide__slide {
+        flex-shrink: 0;
     }
 }
 
 .c-cta-background-image {
-    width: auto;
+    // width: auto;
     height: 80rem;
     object-fit: cover;
     display: block;

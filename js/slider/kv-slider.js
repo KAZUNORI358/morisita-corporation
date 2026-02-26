@@ -18,6 +18,8 @@ export const initializeKvSlider = () => {
         interval: INTERVAL_TIME,
         speed: 1000,
         pauseOnHover: false, // マウスがホバーの時、停止しない
+        flick: false,
+        drag: false,
     });
     // 円弧の半径
     const radius = 59;

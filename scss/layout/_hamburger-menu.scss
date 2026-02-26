@@ -9,13 +9,20 @@ component > hamburger-menu
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     color: var(--color-text-white);
     background-color: var(--color-bg-primary);
     z-index: var(--z-index-modal);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+
+    // dialogタグ特有のリセット
+    border: none;
+    margin: 0;
+    padding: 0;
+    max-width: none;
+    max-height: none;
 
     @include g.mq(md) {
         display: none;
@@ -34,7 +41,6 @@ component > hamburger-menu
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100vw;
 }
 
 .l-hamburger-menu-button {
@@ -83,7 +89,7 @@ component > hamburger-menu
 .l-hamburger-menu-content {
     padding: 0 69rem 0 20rem;
     margin-top: 30rem;
-    width: 100vw;
+    width: 100%;
 }
 
 .l-hamburger-menu-list {

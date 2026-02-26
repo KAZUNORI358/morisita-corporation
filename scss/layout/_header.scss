@@ -16,8 +16,8 @@ layout > header
         padding: 47rem 69rem 25rem 70rem;
     }
 
-    /* スクロールしたときのスタイル */
     &.is-active {
+        /* スクロールしたときのスタイル */
         position: fixed;
         padding: 10rem 20rem 15rem 20rem;
         background-color: var(--color-bg-primary);
@@ -32,7 +32,7 @@ layout > header
 
         @include g.mq() {
             padding: 8rem 78rem 8rem 70rem;
-
+            width: 1440rem;
             .l-header-item,
             .l-header-item-business {
 

@@ -8,51 +8,34 @@ export const initializeHamburgerMenu = () => {
     const dialogMenu = document.querySelector(".js-hamburger-menu-dialog");
     if (!menuButtonOpen || !menuButtonClose || !dialogMenu) return;
 
-    // メニューを開いたときのキーフレーム
-    const showKeyframes = {
-        opacity: [0, 1],
-        visibility: `visible`,
-    };
-    // メニューを閉じたときのキーフレーム
-    const hideKeyframes = {
-        opacity: [1, 0],
-        visibility: `hidden`,
-    };
+    // 初期状態：透明にして隠しておく
+    gsap.set(dialogMenu, { autoAlpha: 0 });
 
-    // アニメーションのオプション
-    const options = {
-        duration: 500,
-        easing: `ease`,
-        fill: `forwards`,
-    };
-
-    // メニューを開く関数
     const openMenu = () => {
-        dialogMenu.show();
-        dialogMenu.animate(showKeyframes, options);
-        // 背景のスクロールを防ぐ
-        document.body.style.overflow = "hidden";
+        dialogMenu.showModal(); // dialogを表示
+        document.body.style.overflow = "hidden"; // 背景固定
+
+        gsap.to(dialogMenu, {
+            autoAlpha: 1,
+            duration: 0.5,
+            ease: "power2.out",
+        });
     };
 
-    // メニューを閉じる関数
     const closeMenu = () => {
-        const closeAnimation = dialogMenu.animate(hideKeyframes, options);
-        closeAnimation.onfinish = () => {
-            dialogMenu.close();
-            // 背景のスクロールを解除
-            document.body.style.overflow = "auto";
-        };
+        gsap.to(dialogMenu, {
+            autoAlpha: 0,
+            duration: 0.4,
+            ease: "power2.in",
+            onComplete: () => {
+                dialogMenu.close(); // アニメーション終了後に閉じる
+                document.body.style.overflow = ""; // 背景固定解除
+            },
+        });
     };
 
-    //OPENメニューボタンを押したときの処理
-    menuButtonOpen.addEventListener(`click`, () => {
-        openMenu();
-    });
-
-    //CLOSEメニューボタンを押したときの処理
-    menuButtonClose.addEventListener(`click`, () => {
-        closeMenu();
-    });
+    menuButtonOpen.addEventListener("click", openMenu);
+    menuButtonClose.addEventListener("click", closeMenu);
 
     // escキーを押した場合、メニューを閉じる
     document.addEventListener(`keydown`, (event) => {

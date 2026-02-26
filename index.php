@@ -60,8 +60,8 @@
 </div>
 
 <!-- news -->
-<section class="top-news l-container-l js-scrollTarget">
-    <div class="top-news-header">
+<section class="top-news l-container-l">
+    <div class="top-news-header js-scrollTarget">
         <span class="top-news-title-en">News</span>
         <h2 class="top-news-title-ja">お知らせ</h2>
         <a href="<?php echo esc_url(home_url('news')); ?>" class="top-news-button-pc">

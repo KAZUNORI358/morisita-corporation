@@ -1,5 +1,5 @@
 import { initializeHamburgerMenu } from "./component/hamburger-menu.js";
-import { initializedDropdownMenu } from "./component/dropdownmenu.js";
+import { initializedDropdownMenu } from "./component/dropdown-menu.js";
 import { initializeFooterSmoothScroll } from "./smooth-scroll/footer-smooth-scroll.js";
 import { initializeSidebarSmoothScroll } from "./smooth-scroll/sidebar-smooth-scroll.js";
 import { initializeHeaderScroll } from "./component/header-scroll.js";

@@ -2,15 +2,19 @@ export const initializeHeaderScroll = () => {
     const kvScrollTriggerElement = document.querySelector(".js-scrollTarget");
     const headerElement = document.querySelector(".js-header");
     const headerWhiteElement = document.querySelectorAll(".js-header-white");
-    const hamburgerMenuDialogElement = document.querySelector(".js-header-hamburger-menu-dialog");
-    const dropdownMenuElement = document.querySelector(".js-header-scroll-dropdown-menu");
+    const hamburgerMenuDialogElement = document.querySelector(
+        ".js-header-hamburger-menu-dialog",
+    );
+    const dropdownMenuElement = document.querySelector(
+        ".js-header-scroll-dropdown-menu",
+    );
 
     if (!headerElement || !kvScrollTriggerElement) return;
 
     ScrollTrigger.create({
         trigger: kvScrollTriggerElement,
         start: "top top",
-        // markers: true, //マーカーを表示する
+        // markers: true,
         onEnter: () => {
             headerElement.classList.add("is-active");
             hamburgerMenuDialogElement.classList.add("is-active");
@@ -38,6 +42,7 @@ export const initializeHeaderScroll = () => {
                 duration: 0.6,
                 ease: "power2.out",
                 backgroundColor: "transparent",
+
                 onComplete: () => {
                     headerElement.classList.remove("is-active");
                     hamburgerMenuDialogElement.classList.remove("is-active");

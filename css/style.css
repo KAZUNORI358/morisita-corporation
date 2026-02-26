@@ -507,7 +507,7 @@ component > cta
   position: absolute;
   top: 51%;
   left: 50%;
-  width: 100%;
+  width: 380rem;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: var(--z-index-background);
@@ -516,11 +516,26 @@ component > cta
 @media screen and (min-width: 768px) {
   .c-cta-background {
     top: 54%;
+    width: 1440rem;
   }
+}
+.c-cta-background .splide__track {
+  overflow: visible;
+}
+.c-cta-background .splide__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.c-cta-background .splide__slide {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .c-cta-background-image {
-  width: auto;
   height: 80rem;
   -o-object-fit: cover;
      object-fit: cover;
@@ -798,10 +813,8 @@ layout > header
     padding: 47rem 69rem 25rem 70rem;
   }
 }
-.l-header {
-  /* スクロールしたときのスタイル */
-}
 .l-header.is-active {
+  /* スクロールしたときのスタイル */
   position: fixed;
   padding: 10rem 20rem 15rem 20rem;
   background-color: var(--color-bg-primary);
@@ -815,6 +828,7 @@ layout > header
 @media screen and (min-width: 768px) {
   .l-header.is-active {
     padding: 8rem 78rem 8rem 70rem;
+    width: 1440rem;
   }
   .l-header.is-active .l-header-item a,
   .l-header.is-active .l-header-item button,
@@ -1533,13 +1547,18 @@ component > hamburger-menu
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   color: var(--color-text-white);
   background-color: var(--color-bg-primary);
   z-index: var(--z-index-modal);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  border: none;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  max-height: none;
 }
 @media screen and (min-width: 768px) {
   .l-hamburger-menu-dialog {
@@ -1564,7 +1583,6 @@ component > hamburger-menu
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
 }
 
 .l-hamburger-menu-button {
@@ -1611,7 +1629,7 @@ component > hamburger-menu
 .l-hamburger-menu-content {
   padding: 0 69rem 0 20rem;
   margin-top: 30rem;
-  width: 100vw;
+  width: 100%;
 }
 
 .l-hamburger-menu-list {
@@ -1958,8 +1976,8 @@ page > top > news
   content: "";
   position: absolute;
   top: -26rem;
-  right: -22rem;
-  width: calc(100% + 20rem);
+  left: 0;
+  width: 360rem;
   height: 40rem;
   background-color: var(--color-bg-white);
   z-index: var(--z-index-default);
@@ -1967,8 +1985,7 @@ page > top > news
 }
 @media screen and (min-width: 768px) {
   .top-news::before {
-    right: -80rem;
-    width: calc(100% + 80rem);
+    width: 1370rem;
     height: 60rem;
     border-radius: 500rem 0 0 0;
   }
@@ -2343,7 +2360,7 @@ page > top > business
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 18rem;
+  gap: 16rem;
   padding: 20rem 20rem 10rem 17rem;
   border-top: 1rem solid var(--color-sep-lightgrey);
   position: relative;
@@ -2375,7 +2392,7 @@ page > top > business
 .top-business-link-text {
   font-size: 18rem;
   letter-spacing: 0.05em;
-  width: 252rem;
+  width: 230rem;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
