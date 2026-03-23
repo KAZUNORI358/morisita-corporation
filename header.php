@@ -31,7 +31,7 @@
     <?php if (is_front_page()) : ?>
         <header class="l-header js-header">
             <div class="l-header-inner">
-                <h1 class="l-header-logo">
+                <<?php echo is_front_page() ? 'h1' : 'div'; ?> class="l-header-logo">
                     <a href="<?php echo esc_url(home_url('/')); ?>">
                         <picture class="l-header-logo-default">
                             <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/logo/logo-white-pc.svg" media="(min-width: 768px)" />
@@ -44,7 +44,7 @@
                             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/logo/logo-white-sp.svg" width="300" height="48" alt="森下株式会社" />
                         </picture>
                     </a>
-                </h1>
+                </<?php echo is_front_page() ? 'h1' : 'div'; ?>>
                 <div class="l-header-nav-wrapper">
                     <nav class="l-header-nav" aria-label="メニュー">
                         <ul class="l-header-list">
